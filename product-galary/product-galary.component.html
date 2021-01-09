@@ -1,0 +1,53 @@
+<!-- <app-nav></app-nav> -->
+<div class="container"></div>
+<div class="row">
+  <!-- col1 -->
+  <div class="col-6 col-md-4">
+    <img src="../../assets/1200/horizontal mask.png" class="img-ht img-fluid img-hover-zoom img-hover-zoom--xyz">
+  </div>
+  <!-- col2 -->
+  <div class="col-6 col-md-4">
+    <div class="row">
+      <a><img  src="../../assets/Play-video.jpg" class="img-ht img-fluid zoom" alt="video" (click)="videoModal1.show()"></a>
+    </div>
+    <div class="row">
+      <img src="../../assets/black-mask.png" class="img-ht img-fluid zoom">
+      <!-- <div class="col">
+        <img src="../../assets/blue-mask.jpg" class="img-ht img-fluid ">
+      </div>
+      <div class="col">
+        <img src="../../assets/pink-mask.png" class="img-ht img-fluid ">
+      </div> -->
+    </div>
+  </div>
+  <!-- col3 -->
+  <div class="col-6 col-md-4">
+    <div class="row">
+      <!-- <img src="../../assets/black-mask.png" class="img-ht img-fluid "> -->
+      <!-- <div class="embed-responsive embed-responsive-4by3"> -->
+        <a><img  src="../../assets/Play-video.jpg" class="img-ht img-fluid zoom" alt="video" (click)="videoModal1.show()"></a>
+      <!-- </div> -->
+    </div>
+    <div class="row">
+      <img src="../../assets/1200/2.png" class="img-ht img-fluid zoom">
+    </div>
+  </div>
+</div>
+<!-- ////////// pop up model  /////////// -->
+
+<div mdbModal #videoModal1="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myVideoModal1Label"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body mb-0 p-0">
+        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/1aUNK08LbOQ" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button mdbBtn type="button" color="primary" rounded="true" outline="true" size="md" (click)="videoModal1.hide()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <app-footer></app-footer> -->

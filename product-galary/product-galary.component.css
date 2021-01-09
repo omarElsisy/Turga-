@@ -1,0 +1,64 @@
+/* body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    } */
+
+.gal-item{
+	overflow: visible;
+	padding: 0px;
+}
+.gal-item .box{
+	max-height: 100%;
+	overflow: visible;
+}
+.box img{
+	max-height: 100%;
+	width: auto;
+	object-fit:cover;
+}
+.row{
+	padding: 1%;
+	margin: 0%;
+	
+}
+.col-6{
+	padding: 0%;
+	margin: 0%;
+}
+.col{
+	padding: 0%;
+	margin: 0%;
+}
+body {margin:2rem;}
+
+.modal-dialog {
+      max-width: 100%;
+      margin: 30px auto;
+  }
+
+
+
+.modal-body {
+  position:relative;
+  padding:0px;
+}
+/* .close {
+  position:absolute;
+  right:-30px;
+  top:0;
+  z-index:999;
+  font-size:2rem;
+  font-weight: normal;
+  color:#fff;
+  opacity:1;
+} */
+.zoom {
+  padding: 0px;
+  background-color: black;
+  transition: transform .2s; /* Animation */
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}

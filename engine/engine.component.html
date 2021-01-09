@@ -1,0 +1,74 @@
+<!-- <app-nav></app-nav> -->
+
+<div>
+    <canvas #rendererCanvas id="renderCanvas">
+    </canvas>
+    <div>
+        <h5>Colors</h5>
+        <div class="btn-group colored">
+            <!-- <h3 class="colored">colors</h3> -->
+
+            <input type="radio" id="wigth" name="q" value="yes" checked="true" (click)="wigth()" />
+            <label for="wigth"><svg shape-rendering="optimizeQuality" preserveAspectRatio="xMidYMid meet"
+                    viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <circle class="outer" fill="#BDBDBD" cx="32" cy="32" r="32"></circle>
+                    <circle class="inner" fill="#FFFFFF" cx="32" cy="32" r="28"></circle>
+                </svg></label>
+
+            <input type="radio" id="black" name="q" value="no" (click)="black()" />
+            <label for="black">
+                <svg shape-rendering="optimizeQuality" preserveAspectRatio="xMidYMid meet" viewBox="0 0 64 64"
+                    version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <circle class="outer" fill="#BDBDBD" cx="32" cy="32" r="32"></circle>
+                    <circle class="inner_black" fill="#FFFFFF" cx="32" cy="32" r="28"></circle>
+                </svg></label>
+            <br>
+
+
+            <input type="radio" id="blue" name="q" value="no" (click)="blue()" />
+            <label for="blue">
+                <svg shape-rendering="optimizeQuality" preserveAspectRatio="xMidYMid meet" viewBox="0 0 64 64"
+                    version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <circle class="outer" fill="#BDBDBD" cx="32" cy="32" r="32"></circle>
+                    <circle class="inner_blue" fill="#FFFFFF" cx="32" cy="32" r="28"></circle>
+                </svg></label>
+
+            <input type="radio" id="read" name="q" value="no" (click)="read()" />
+            <label for="read">
+                <svg shape-rendering="optimizeQuality" preserveAspectRatio="xMidYMid meet" viewBox="0 0 64 64"
+                    version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <circle class="outer" fill="#BDBDBD" cx="32" cy="32" r="32"></circle>
+                    <circle class="inner_read" fill="#FFFFFF" cx="32" cy="32" r="28"></circle>
+                </svg></label>
+
+            <input type="radio" id="pink" name="q" value="no" (click)="pink()" />
+            <label for="pink">
+                <svg shape-rendering="optimizeQuality" preserveAspectRatio="xMidYMid meet" viewBox="0 0 64 64"
+                    version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <circle class="outer" fill="#BDBDBD" cx="32" cy="32" r="32"></circle>
+                    <circle class="inner_pink" fill="#FFFFFF" cx="32" cy="32" r="28"></circle>
+                </svg></label>
+            <br>
+
+        </div>
+    </div>
+    <div class="col btn-group">
+        <span> <a type="button" class="btn btn-outline-info " (click)="onClinckTurgaMpro()"><img
+                    src="../../assets/turga.png" width="40px"></a> </span>
+        <span> <a type="button" class="btn btn-outline-info " (click)="onClinckTurgaMproClear()"><img
+                    src="../../assets/m-pro clear.png" width="40px"></a> </span>
+        <span> <a type="button" class="btn btn-outline-info" (click)="onClinckHafeFace()"><img
+                    src="../../assets/m-pro.png" width="40px" height="40px"></a> </span>
+        <span> <a type="button" class="btn btn-outline-info" (click)="onClinckHafeFace()"><img
+                    src="../../assets/olypmian.png" width="40px" height="40px"></a> </span>
+
+    </div>
+
+    <!-- <button (click) = "onClinckTurgaMpro()"></button>
+            <button (click) = "onClinckTurgaMproClear()"></button>
+            <button (click) = "onClinckHafeFace()"></button> -->
+
+
+</div>
+<!-- <app-footer></app-footer> -->
