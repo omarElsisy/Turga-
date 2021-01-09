@@ -1,0 +1,137 @@
+<!-- Top navigation -->
+<div class="topnav">
+
+  <!-- Centered link -->
+  <div class="topnav-centered">
+    <a href="#">
+      <img src="../../assets/1200/logo.png" style="width:80px;">
+    </a>
+  </div>
+
+  <!-- Left-aligned links (default) -->
+  <!-- <a href="#news">Galary</a>
+  <a href="#contact">Contact</a> -->
+
+  <!-- Right-aligned links -->
+  <div class="topnav-right">
+    
+      
+        <a [routerLink]="['/registration']"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+        <a href="#myModal " (click)="show()"><span class="glyphicon glyphicon-log-in "></span> Login</a>
+        
+      
+   
+    <!-- <a href="#search">Search</a>
+    <a href="#about">About</a> -->
+    <div class="icon-cart">
+      <div class="cart-line-1" style="background-color: #2CC3B5"></div>
+      <div class="cart-line-2" style="background-color: #2CC3B5"></div>
+      <div class="cart-line-3" style="background-color: #2CC3B5"></div>
+      <div class="cart-wheel" style="background-color: #2CC3B5"></div>
+    </div>
+    <!-- <i class="bi bi-cart"></i> -->
+    <!-- <fa-icon [icon]="faCoffee"></fa-icon> -->
+  </div>
+
+</div>
+<!-- //////////////////// -->
+<div id="mySidenav" class="sidenav">
+
+
+  <ul>
+    <li>
+      <input type="radio" id="f-option" name="selector" [routerLink]="['']">
+      <label for="f-option">main</label>
+
+      <div class="check"></div>
+    </li>
+    <br>
+    <br>
+    <br>
+  
+
+    <li>
+      <input type="radio" id="s-option" name="selector" [routerLink]="['/productGalary']">
+      <label for="s-option">galary</label>
+
+      <div class="check">
+        <div class="inside"></div>
+      </div>
+    </li>
+
+    <br>
+    <br>
+    <br>
+
+    <li>
+      <input type="radio" id="t-option" name="selector" [routerLink]="['/product']">
+      <label for="t-option">shop</label>
+
+      <div class="check">
+        <div class="inside"></div>
+      </div>
+    </li>
+
+    <br>
+    <br>
+    <br>
+    <li>
+      <input type="radio" id="fo-option" name="selector" [routerLink]="['/contact']">
+      <label for="fo-option">contact</label>
+
+      <div class="check">
+        <div class="inside"></div>
+      </div>
+    </li>
+
+
+
+
+
+  </ul>
+
+  <!-- Creates the bootstrap modal where the image will appear -->
+  <div [style.display]="showModal ? 'block' : 'none'" class="modal" id="imagemodal" tabindex="-1" role="dialog"
+    aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myModalLabel">Login</h4>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label>Email</label>
+              <input type="text" formControlName="email" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+              <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">Email is required</div>
+                <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" formControlName="password" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+              <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">Password is required</div>
+                <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+              </div>
+            </div>
+            <div class="form-group form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" name="remember"> Remember me
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary">login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-dismiss="modal" (click)="hide()">Close</button>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
